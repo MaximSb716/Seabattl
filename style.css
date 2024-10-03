@@ -35,6 +35,7 @@ header {
     width: 100%;
     background-color: rgb(129, 216, 208);
     height: 100px;
+    z-index: 100;
 }
 
 ul {
@@ -76,7 +77,6 @@ footer {
 }
 
 .CreateField {
-    margin-top: 110px;
     width: auto;
     padding: 5px;
     cursor: pointer;
@@ -85,6 +85,7 @@ footer {
 
 .fieldsUl {
     margin-top: 10px;
+    margin-bottom: 110px;
     padding-left: 0;
     width: 100%;
     flex-direction: column;
@@ -98,7 +99,9 @@ footer {
     border: 1px solid grey;
     margin-top: 5px;
 }
-
+.div1{
+    margin-top: 110px;
+}
 .fieldsBox {
     display: flex;
     justify-content: space-evenly;
@@ -106,12 +109,20 @@ footer {
 
 .mineField {
     width: 800px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
     aspect-ratio: 1 / 1;
     background-color: blue;
 }
-
+.fieldLine{
+    display: flex;
+}
 .enemyField {
     width: 800px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
     aspect-ratio: 1 / 1;
     background-color: blue;
 }
@@ -151,6 +162,7 @@ footer {
     height: 70vh;
     width: 100%;
     position: relative;
+    margin-top: 50px;
 }
 
 .startGameButton {
@@ -160,38 +172,51 @@ footer {
 }
 
 .fieldText {
-    margin-top: 10vh;
+    padding-top: 15vh;
+    padding-bottom: -20vh;
     font-size: 40px;
+    display: flex;
 }
-.fieldElement{
-    
+.fieldElement,.fieldElement1{
+    width: 78px;
+    margin: 1px 1px 1px 1px;
+    height: 78px;
+    background: antiquewhite;
 }
-
-
+.fieldElement2{
+    width: 78px;
+    margin: 1px 1px 1px 1px;
+    height: 78px;
+    background: red;
+}
+.fieldElement3{
+    width: 78px;
+    margin: 1px 1px 1px 1px;
+    height: 78px;
+    background: rgb(0, 68, 255);
+}
+.mineblock{
+    padding-top: 20vh;
+    z-index: 10;
+}
+.enemyblock{
+    padding-top: 20vh;
+}
+.readyButton,.readyRandomButton{
+    width: 80px;
+    height: 50px;
+    margin-left: 5%;
+    cursor: pointer;
+}
 
 @media(min-width:1px)and (max-width:1620px) {
     .fieldText {
         margin-top: 0px;
     }
 
-    .twoFieldsBox {
-        flex-direction: column;
-    }
-
-    .mineField {
-        width: 600px;
-        aspect-ratio: 1 / 1;
-        background-color: blue;
-    }
-
-    .enemyField {
-        width: 600px;
-        aspect-ratio: 1 / 1;
-        background-color: blue;
-    }
 }
 
-@media(min-width:800px)and (max-width:1180px) {
+@media(min-width:800px)and (max-width:1660px) {
     .registration-box {
         margin-left: 2%;
         margin-right: 2%;
@@ -211,6 +236,21 @@ footer {
         width: 60%;
         height: 60px;
     }
+    
+    .mineblock{
+        padding-top: 35vh;
+        align-items: center;
+        margin-left: auto;   
+        z-index: 10;
+    }
+
+    .enemyblock{
+        margin-top: 2100px; 
+        align-items: center; 
+        margin-left: -800px;  
+        margin-right: 10%;
+    }
+    
 }
 
 @media(min-width:1px)and (max-width:800px) {
@@ -237,7 +277,22 @@ footer {
     header {
         height: 70px;
     }
+    .mineblock{
+        padding-top: 40vh;
+        align-items: center;
+        margin-left: auto;   
+        z-index: 10;
+    }
+
+    .enemyblock{
+        margin-top: 2200px; 
+        align-items: center; 
+        margin-left: -800px;  
+        margin-right: 20%;
+    }
+
 }
 
 /* https://studyprograms.informatics.ru/api/jsonstorage/*/
-/**/
+/*
+*/
