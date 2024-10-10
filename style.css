@@ -189,6 +189,12 @@ footer {
     height: 78px;
     background: red;
 }
+.fieldElement4{
+    width: 78px;
+    margin: 1px 1px 1px 1px;
+    height: 78px;
+    background: rgb(126, 0, 0);
+}
 .fieldElement3{
     width: 78px;
     margin: 1px 1px 1px 1px;
@@ -295,4 +301,50 @@ footer {
 
 /* https://studyprograms.informatics.ru/api/jsonstorage/*/
 /*
+if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+        let flag = false
+        let gamestep3 = new XMLHttpRequest();
+        gamestep3.open('GET', 'https://studyprograms.informatics.ru/api/jsonstorage/?id=66dd2f6d4abe575c51e8c7b9faac9ee8', true);
+        gamestep3.send();
+        gamestep3.addEventListener('readystatechange', function () {
+            if (gamestep3.readyState == 4 && gamestep3.status == 200) {
+                let gameArr3 = JSON.parse(gamestep3.responseText)
+                for (let elem of gameArr3) {
+                    if (elem[10] == localStorage.getItem('login')) {
+                        flag = true
+                        for (let i = 0; i < 10; i++) {
+                            for (let j = 0; j < 10; j++) {
+                                if (elem[i][j] == 1) {
+                                    let k = i * 10 + j
+                                    let b = 'fieldPart' + k
+                                    let c = document.querySelector('#' + b)
+                                    c.classList = ('fieldElement2')
+                                }
+                                if (elem[i][j] == 2) {
+                                    let k = i * 10 + j
+                                    let b = 'fieldPart' + k
+                                    let c = document.querySelector('#' + b)
+                                    c.classList = ('fieldElement3')
+                                }
+                                if (elem[i][j] == 3) {
+                                    let k = i * 10 + j
+                                    let b = 'fieldPart' + k
+                                    let c = document.querySelector('#' + b)
+                                    c.classList = ('fieldElement4')
+                                }
+                            }
+                        }
+                        localStorage.setItem('correct', 1)
+                        localStorage.setItem('gameStarted', 1)
+                        localStorage.setItem('startClicked', 1)
+                    }
+                }
+                if (flag == false) {
+                    localStorage.setItem('correct', 0)
+                    localStorage.setItem('gameStarted', 0)
+                    localStorage.setItem('startClicked', 0)
+                }
+            }
+        })
+    }
 */
