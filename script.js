@@ -793,16 +793,18 @@ function gameGoing() {
 if (document.title == "Game") {
 
     loseButton.addEventListener('click', function (){
-                
-localStorage.setItem('startClicked', 0)
-
-                                            window.location.href = 'index3.html';
-        localStorage.setItem('enterGame', 0)
-
-                                            localStorage.setItem('correct', 0)
-
-                                            localStorage.setItem('gameStarted', 0)
-                                    
+          localStorage.setItem('startClicked', 0)
+          window.location.href = 'index3.html';
+          localStorage.setItem('enterGame', 0)
+          localStorage.setItem('correct', 0)
+          localStorage.setItem('gameStarted', 0)                         
+    })
+    document.addEventListener('click', function (e) {
+        if (e.target.id.slice(0, 9) == "fieldPart") {
+            if (localStorage.getItem('correct') == 0) {
+                e.target.classList.toggle('fieldElement2')
+            }
+        }
     })
     readyButton.addEventListener('click', function () {
 
